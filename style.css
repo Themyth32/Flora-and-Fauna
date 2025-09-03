@@ -1,0 +1,100 @@
+@import
+   url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+ @import
+   url('https://fonts.googleapis.com/css?family=Signika Negative');
+@import
+   url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import
+   url('https://fonts.googleapis.com/css?family=Rowdies');
+
+body{ background-image:url(https://lh5.googleusercontent.com/y33CO2ufOYn9BmApe-uE1gmciXpO5MtjbiRyNkJR310cKXd0hrpZ3tGpAG7L0ukXnS4=w2400);
+}
+
+    nav{
+  align-items:center;
+  word-spacing:15px;
+}
+    
+hr{
+ background-color:#ff945e;
+  
+}
+ a {
+  font-family: 'Signika Negative';
+  text-decoration: none;
+  font-size:15px;
+  color: #927158; 
+  position: relative;
+  font-size:18px;
+  letter-spacing: 0.5px;
+}
+
+a:after{
+  content:"";
+  position:absolute;
+  background-color:#927158;
+  height:2px;
+  width:0;
+  left:50%;
+  bottom:-3px;
+  transition:0.4s;
+}
+
+a:hover{
+  color:#694E4E;
+}
+a:hover:after{
+  left:0;
+  width:100%
+}
+
+#D1 {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: bold;
+  font-size:16px;
+  color:#594545;
+}
+
+#D2 {
+  font-family: 'Roboto Condensed';
+  font-weight:bold;
+  font-size:16px;
+  color:#594545;
+}
+
+#headtitle  {
+  font-family: 'Rowdies';
+  font-weight:light;
+  text-decoration: none;
+  font-size:30px;
+  color: #533535;
+}
+   
+#SocialMediaLinks {
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+  text-decoration: none;
+  color:black;
+  font-size:12px;
+  
+}
+
+#Welcome {
+  font-family: 'Signika Negative';
+  font-weight: bold;
+  text-decoration: none;
+  font-size:25px;
+  color: #533535;
+}
+
+br {
+            display: block;
+            margin-bottom: 10em;
+        }
+
+img {
+  
+ border-radius:6px;.
+ 
+}
