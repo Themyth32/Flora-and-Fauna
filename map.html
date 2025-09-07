@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emirates International School Meadows</title>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+    }
+
+
+    h1 {
+      text-align: center;
+      color: white;
+      margin-top: 30px;
+      font-size: 2.2em;
+    }
+
+
+    .map-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+
+    .map-wrapper {
+      background-color: #111;
+      border: 2px solid #444;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      max-width: 90%;
+    }
+
+
+    .map-wrapper img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+
+    .intro {
+      text-align: center;  
+      max-width: 800px;    
+      margin: 0 auto;    
+      padding: 2rem;
+      font-size: 2em;    
+    }
+
+
+    #tooltip {
+      display: none;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.9em;
+      pointer-events: none;
+      transition: opacity 0.2s ease-in-out;
+      z-index: 1000;
+    }
+
+
+    area {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="intro">
+  <h1>Emirates International School Meadows</h1>
+  <p>
+    A digital archive of our campus and nature. Aiming to fostering environmental
+    awareness, education, and conservation for future generations.
+  </p>
+  <p>
+    Explore the interactive EISM biodiversity map
+  </p>
+</div>
+
+
+
+
+  <div class="map-container">
+    <div class="map-wrapper">
+      <img src="map1.png" usemap="#EISMap" alt="School Map">
+    </div>
+    <div id="tooltip"></div>
+  </div>
+
+
+  <map name="EISMap">
+    <area target=""
+    alt="Bike Parking" title="Bike Parking"
+    href="yellow.html"
+    coords="268,529,474,352,422,298,219,479"
+    shape="poly"
+    onmouseover="showTooltip(event, 'Bike Parking')"
+    onmousemove="moveTooltip(event)"
+    onmouseout="hideTooltip()" />
+
+
+    <area target=""
+    alt="Outside seating"
+    title="Outside seating"
+    href="pink.html"
+    coords="776,248,827,206,1060,539,1051,550"
+    shape="poly"
+    onmouseover="showTooltip(event, 'Outside seating')"
+    onmousemove="moveTooltip(event)"
+    onmouseout="hideTooltip()"
+    >
+
+
+    <area target=""
+    alt="Main entrance"
+    title="Main entrance"
+    href="green.html"
+    coords="249,559,292,521,312,538,302,554,350,610,378,596,402,622,396,635,452,701,446,711,517,797,535,784,622,864,609,880,663,937,602,984"
+    shape="poly"
+    onmouseover="showTooltip(event, 'Main entrance')"
+    onmousemove="moveTooltip(event)"
+    onmouseout="hideTooltip()"    
+    >
+
+
+    <area target=""
+    alt="Primary entrance"
+    title="Primary entrance"
+    href="blue.html"
+    coords="1077,561,1121,614,706,961,694,947,923,769,925,753,958,733,953,720,962,704,955,699"
+    shape="poly"
+    onmouseover="showTooltip(event, 'Primary entrance')"
+    onmousemove="moveTooltip(event)"
+    onmouseout="hideTooltip()"
+    >    
+
+
+  </map>
+
+
+    <script>
+     const tooltip = document.getElementById("tooltip");
+
+
+     function showTooltip(e, text) {
+      tooltip.innerText = text;
+      tooltip.style.display = "block";
+      moveTooltip(e);
+     }
+
+
+     function moveTooltip(e) {
+      tooltip.style.left = (e.pageX + 15) + "px";
+      tooltip.style.top = (e.pageY + 15) + "px";
+     }
+
+
+     function hideTooltip() {
+      tooltip.style.display = "none";
+     }
+    </script>
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+ 
+    <script>
+     imageMapResize();
+    </script>
+
+
+</body>
+</html>
