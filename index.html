@@ -50,7 +50,7 @@
       max-width: 800px;    
       margin: 0 auto;    
       padding: 2rem;
-      font-size: 2em;    
+      font-size: 1.1em;    
     }
 
 
@@ -99,51 +99,63 @@
 
 
   <map name="EISMap">
-    <area target=""
-    alt="Bike Parking" title="Bike Parking"
-    href="yellow.html"
-    coords="268,529,474,352,422,298,219,479"
+    <area target="" alt="Bike parking" 
+    title="Bike parking" 
+    href="yellow.html" 
+    coords="413,728,626,983,566,1046,347,789" 
     shape="poly"
-    onmouseover="showTooltip(event, 'Bike Parking')"
+    onmouseover="showTooltip(event, 'Bike parking')"
     onmousemove="moveTooltip(event)"
-    onmouseout="hideTooltip()" />
+    onmouseout="hideTooltip()">
 
-
-    <area target=""
-    alt="Outside seating"
-    title="Outside seating"
-    href="pink.html"
-    coords="776,248,827,206,1060,539,1051,550"
+    <area target="" alt="High school" 
+    title="High school" 
+    href="purple.html" 
+    coords="424,724,708,488,739,523,836,439,979,596,924,646,948,677,853,761,755,819,704,849,723,881,657,937,640,925,606,953" 
     shape="poly"
-    onmouseover="showTooltip(event, 'Outside seating')"
+    onmouseover="showTooltip(event, 'High school')"
     onmousemove="moveTooltip(event)"
-    onmouseout="hideTooltip()"
-    >
+    onmouseout="hideTooltip()">
 
-
-    <area target=""
-    alt="Main entrance"
-    title="Main entrance"
-    href="green.html"
-    coords="249,559,292,521,312,538,302,554,350,610,378,596,402,622,396,635,452,701,446,711,517,797,535,784,622,864,609,880,663,937,602,984"
+    <area target="" 
+    alt="Primary school" 
+    title="Primary school"
+    href="red.html" 
+    coords="1001,569,1113,483,845,182,823,205,684,59,601,124,689,220,663,235,716,292,746,276" 
     shape="poly"
+    onmouseover="showTooltip(event, 'Primary school')"
+    onmousemove="moveTooltip(event)"
+    onmouseout="hideTooltip()">
+ 
+    <area target=""
+     alt="Main entrance"
+     title="Main entrance"
+     href="green.html"
+     coords="612,956,662,1007,1169,581,1118,509,1051,572,1035,552,1003,581,1011,599,942,654,958,680,861,765,840,760,760,825,746,827,722,856,735,879,657,941,642,928"
+     shape="poly"
     onmouseover="showTooltip(event, 'Main entrance')"
     onmousemove="moveTooltip(event)"
-    onmouseout="hideTooltip()"    
-    >
+    onmouseout="hideTooltip()">
 
-
-    <area target=""
-    alt="Primary entrance"
-    title="Primary entrance"
-    href="blue.html"
-    coords="1077,561,1121,614,706,961,694,947,923,769,925,753,958,733,953,720,962,704,955,699"
+    <area target="" 
+    alt="Primary entrance" 
+    title="Primary entrance" 
+    href="blue.html" 
+    coords="739,0,1141,462,1130,476,902,211,889,211,854,175,781,148,676,40" 
     shape="poly"
     onmouseover="showTooltip(event, 'Primary entrance')"
     onmousemove="moveTooltip(event)"
-    onmouseout="hideTooltip()"
-    >    
+    onmouseout="hideTooltip()">
 
+    <area target="" 
+    alt="Outside seating" 
+    title="Outside seating" 
+    href="pink.html" 
+    coords="647,57,656,70,296,368,252,311" 
+    shape="poly"
+    onmouseover="showTooltip(event, 'Outside seating')"
+    onmousemove="moveTooltip(event)"
+    onmouseout="hideTooltip()">
 
   </map>
 
@@ -160,8 +172,8 @@
 
 
      function moveTooltip(e) {
-      tooltip.style.left = (e.pageX + 15) + "px";
-      tooltip.style.top = (e.pageY + 15) + "px";
+      tooltip.style.left = (e.clientX + window.scrollX + 15) + "px";
+      tooltip.style.top = (e.clientY + window.scrollY + 15) + "px";
      }
 
 
@@ -174,7 +186,9 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
  
     <script>
-     imageMapResize();
+     window.addEventListener("load", () => {
+      imageMapResize();
+     });
     </script>
 
 
